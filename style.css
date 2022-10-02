@@ -1,4 +1,6 @@
-body{ margin:0;}
+body {
+    margin: 0;
+}
 
 
 #container {
@@ -11,6 +13,7 @@ body{ margin:0;}
     align-items: center;
     flex-direction: column;
 }
+
 
 #container h1 {
     color: white;
@@ -46,11 +49,11 @@ body{ margin:0;}
     background-size: 300% 300%;
     animation: fancy 6s infinite;
     transition: 0.4s;
-    border: 2px solid rgba(0,0,0,0)
+    border: 2px solid rgba(0, 0, 0, 0)
 }
 
 #container a:hover {
-    border: 2px solid rgba(255,255,255,0.8);  
+    border: 2px solid rgba(255, 255, 255, 0.8);
 }
 
 #container img {
@@ -59,16 +62,20 @@ body{ margin:0;}
     height: auto;
     margin-top: 48px;
 }
+
 @keyframes fancy {
     0% {
         background-position: 1% 99%;
     }
+
     33% {
         background-position: 22% 22%;
     }
+
     66% {
         background-position: 88% 88%;
     }
+
     100% {
         background-position: 1% 99%;
     }
@@ -86,4 +93,18 @@ body{ margin:0;}
     filter: blur(6px) brightness(50%);
     object-fit: cover;
     transform: scale(1.04);
+}
+
+@media only screen and (max-width: 900px) {
+    #container h1 {
+        font-size: 8vw;
+    }
+
+    #container h2 {
+        font-size: 4vw;
+    }
+
+    #container a {
+        font-size: 5vw;
+    }
 }
