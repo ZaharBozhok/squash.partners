@@ -67,7 +67,7 @@ body {
 }
 
 .lang-switcher-container {
-    position: absolute;
+    position: fixed;
     top: 15px;
     left: 15px;
     display: flex;
@@ -164,7 +164,7 @@ body {
     }
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 320px), (max-height: 667px ) {
 
     .lang-switcher-container{
         gap: 2vw;
