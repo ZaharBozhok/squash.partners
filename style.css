@@ -16,6 +16,7 @@ body {
 
 
 #container h1 {
+    order: 1;
     color: white;
     font-family: 'Popins', sans-serif;
     font-size: 5vw;
@@ -23,6 +24,7 @@ body {
 }
 
 #container h2 {
+    order: 2;
     color: white;
     font-family: 'Popins', sans-serif;
     font-size: 2.5vw;
@@ -31,9 +33,10 @@ body {
 }
 
 #container a {
+    order: 3;
     font-size: 1.8vw;
     cursor: pointer;
-    width: 280px;
+    padding: 0 62px;
     height: 64px;
     display: grid;
     place-items: center;
@@ -44,7 +47,6 @@ body {
     font-weight: bold;
     transition: 0.5s;
     margin-top: 32px;
-    background-color: #ff6b6b;
     background: linear-gradient(45deg, #ff0000, #ffaa00, #ffee00);
     background-size: 300% 300%;
     animation: fancy 6s infinite;
@@ -57,10 +59,46 @@ body {
 }
 
 #container img {
+    order: 4;
     border-radius: 20px;
     width: 200px;
     height: auto;
     margin-top: 48px;
+}
+
+.lang-switcher-container {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    gap: 2vh;
+}
+
+.lang-switcher-button {
+    font-size: 1vw;
+    cursor: pointer;
+    padding: 10.5px 25px;
+    display: grid;
+    place-items: center;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Popins', sans-serif;
+    font-weight: bold;
+    transition: 0.5s;
+    background: inherit;
+    background-size: 300% 300%;
+    animation: fancy 6s infinite;
+    transition: 0.4s;
+    border: 2px solid rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+
+}
+
+.lang-switcher-button:hover {
+    border: 2px solid rgba(0, 0, 0, 1);
+    color: black;
+    background-color: white;
 }
 
 @keyframes fancy {
@@ -105,6 +143,34 @@ body {
     }
 
     #container a {
+        order: 4;
         font-size: 5vw;
+        margin-top: 48px;
+    }
+
+    #container img {
+        order: 3;
+        margin-top: 32px;
+    }
+
+    .lang-switcher-button {
+        font-size: 3vw;
+    }
+
+    .lang-switcher-container{
+        left: 0;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+
+    .lang-switcher-container{
+        gap: 2vw;
+    }
+
+    .lang-switcher-button {
+        padding: 8px 18px;
     }
 }

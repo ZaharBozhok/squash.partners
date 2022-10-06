@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,9 +12,16 @@
 
 <div id="container">
   <h1>Looking for a squash<br>partner in Lisbon?</h1>
-  <h2>Join our community in WhatsApp</h2>
-  <a href="https://chat.whatsapp.com/DDqRcm2mjFiL8RY4iXvDOq">Join now!</a>
-  <img src="assets/qr.jpeg" alt="squash">
+  <h2>Join our community in Telegram</h2>
+  <a href="https://t.me/+BbHMaduO-aE1YmUy">Join now!</a>
+  <img src="assets/qr.png" alt="squash">
+</div>
+
+<div class="lang-switcher-container">
+  <button class="lang-switcher-button" id="eng">Eng</button>
+  <button class="lang-switcher-button" id="rus">Rus</button>
+  <button class="lang-switcher-button" id="ukr">Ukr</button>
+  <button class="lang-switcher-button" id="por">Por</button>
 </div>
 
 <video id="videobcg" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0" playsinline>
@@ -30,6 +37,86 @@
   gtag('js', new Date());
 
   gtag('config', 'G-ZDC69QYVDH');
+</script>
+<script type="module">
+  import i18next from 'https://cdn.jsdelivr.net/gh/i18next/i18next/src/index.js';
+
+  i18next.init({
+  lng: ['en','ru','pt','uk'], 
+  resources: {
+    en: {
+      translation: {
+        "key": `<h1>Looking for a squash<br>partner in Lisbon?</h1>
+                <h2>Join our group in Telegram</h2>
+                <a href="https://t.me/+BbHMaduO-aE1YmUy">Join now!</a>
+                <img src="assets/qr.png" alt="squash">
+                `
+      }
+    },
+    ru: {
+      translation: {
+        "key": `<h1>Ищете партнера <br>по сквошу в Лиссабоне?</h1>
+                <h2>Присоединяйтесь к нашей группе в Telegram</h2>
+                <a href="https://t.me/+BbHMaduO-aE1YmUy">Присоединяйся сейчас!</a>
+                <img src="assets/qr.png" alt="squash">
+                `
+      }
+    },
+    pt: {
+      translation: {
+        "key": `<h1>Procura um parceiro <br> de squash em Lisboa?</h1>
+                <h2>Participe do nosso grupo no Telegram</h2>
+                <a href="https://t.me/+BbHMaduO-aE1YmUy">Entrar!</a>
+                <img src="assets/qr.png" alt="squash">
+               `
+      }
+    },
+    uk: {
+      translation: {
+        "key": `<h1>Шукаєте партнера <br> по сквошу в Лісабоні?</h1>
+                <h2>Приєднуйтесь до нашої групи в Telegram</h2>
+                <a href="https://t.me/+BbHMaduO-aE1YmUy">Приєднуйся зараз!</a>
+                <img src="assets/qr.png" alt="squash">
+                `
+      }
+    }
+  }
+});
+
+// Language switch buttons listeners
+
+document.getElementById('eng').addEventListener('click',()=> {
+  document.documentElement.lang = 'en';
+  document.getElementById('container').innerHTML = i18next.changeLanguage('en')
+  .then((t) => {
+    document.getElementById('container').innerHTML = t('key'); 
+  });
+});
+
+document.getElementById('rus').addEventListener('click',()=> {
+  document.documentElement.lang = 'ru';
+  i18next.changeLanguage('ru')
+  .then((t) => {
+    document.getElementById('container').innerHTML = t('key'); 
+  });
+});
+
+document.getElementById('por').addEventListener('click',()=> {
+  document.documentElement.lang = 'pt';
+  i18next.changeLanguage('pt')
+  .then((t) => {
+    document.getElementById('container').innerHTML = t('key'); 
+  });
+});
+
+document.getElementById('ukr').addEventListener('click',()=> {
+  document.documentElement.lang = 'uk';
+  i18next.changeLanguage('uk')
+  .then((t) => {
+    document.getElementById('container').innerHTML = t('key'); 
+  });
+});
+
 </script>
 </body>
 </html>
