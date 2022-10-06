@@ -168,6 +168,7 @@ body {
 
     .lang-switcher-container{
         gap: 2vw;
+        top: 2px;
     }
 
     .lang-switcher-button {
