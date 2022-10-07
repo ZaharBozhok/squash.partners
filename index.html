@@ -6,10 +6,17 @@
   <meta name="description" content="Do you want to find squash partners? Then join our community and play!"/>
   <meta name="keywords" content="squash, find, play, Lisbon, partners, players"/>
   <meta name="revised" content="Friday, October 7th, 2022, 1:15 pm" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="og:title" content="Squash partners Lisbon"/>
-  <meta name="og:image" content="assets/squashers.jpg"/>
-  <meta name="og:description" content="Do you want to find squash partners? Then join our community and play!"/>
+  <meta property="og:url" content="https://squash.partners/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Squash partners Lisbon">
+  <meta property="og:description" content="Do you want to find squash partners? Then join our community and play!">
+  <meta property="og:image" content="https://github.com/ZaharBozhok/squash.partners/blob/main/assets/squashers.jpg?raw=true">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="squash.partners">
+  <meta property="twitter:url" content="https://squash.partners/">
+  <meta name="twitter:title" content="Squash partners Lisbon">
+  <meta name="twitter:description" content="Do you want to find squash partners? Then join our community and play!">
+  <meta name="twitter:image" content="https://github.com/ZaharBozhok/squash.partners/blob/main/assets/squashers.jpg?raw=true">
   <link rel="stylesheet" href="./style.css">
   <title>Squash partners Lisbon</title>
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
@@ -102,6 +109,7 @@ function updatePageLanguage(t) {
   document.getElementById('container').innerHTML = t('content'); 
   document.querySelector('meta[name="description"]').setAttribute("content", t('description'));
   document.querySelector('meta[name="og:description"]').setAttribute("content", t('description'));
+  document.querySelector('meta[name="twitter:description"]').setAttribute("content", t('description'));
 }
 
 document.getElementById('eng').addEventListener('click',()=> {
