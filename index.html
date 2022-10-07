@@ -6,6 +6,7 @@
   <meta name="description" content="Do you want to find squash partners? Then join our community and play!"/>
   <meta name="keywords" content="squash, find, play, Lisbon, partners, players"/>
   <meta name="revised" content="Friday, October 7th, 2022, 1:15 pm" />
+  <meta name="google" content="notranslate" />
   <meta property="og:url" content="https://squash.partners/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Squash partners Lisbon">
@@ -27,7 +28,7 @@
 <main id="container">
   <h1>Looking for a squash<br>partner in Lisbon?</h1>
   <h2>Join our group in Telegram</h2>
-  <a href="https://t.me/+BbHMaduO-aE1YmUy">Join now!</a>
+  <a rel=“nofollow” href="https://t.me/+BbHMaduO-aE1YmUy">Join now!</a>
   <img width="200px" height="200px" src="assets/qr.webp" alt="QR-Code">
 </main>
 
@@ -108,7 +109,7 @@ i18next.on('languageChanged', (lng) => {document.documentElement.setAttribute('l
 function updatePageLanguage(t) {
   document.getElementById('container').innerHTML = t('content'); 
   document.querySelector('meta[name="description"]').setAttribute("content", t('description'));
-  document.querySelector('meta[name="og:description"]').setAttribute("content", t('description'));
+  document.querySelector('meta[property="og:description"]').setAttribute("content", t('description'));
   document.querySelector('meta[name="twitter:description"]').setAttribute("content", t('description'));
 }
 
