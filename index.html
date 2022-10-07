@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Do you want to find squash partners? Then join our community and play!"/>
+  <meta name="keywords" content="squash, find, play, Lisbon, partners, players"/>
+  <meta name="revised" content="Friday, October 7th, 2022, 1:15 pm" />
   <link rel="stylesheet" href="./style.css">
-  <title>Find squash partners and play! Lisbon</title>
+  <title>Squash partners Lisbon</title>
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 <body>
@@ -46,74 +49,80 @@
   resources: {
     en: {
       translation: {
-        "key": `<h1>Looking for a squash<br>partner in Lisbon?</h1>
+        "content": `<h1>Looking for a squash<br>partner in Lisbon?</h1>
                 <h2>Join our group in Telegram</h2>
                 <a href="https://t.me/+BbHMaduO-aE1YmUy">Join now!</a>
                 <img src="assets/qr.png" alt="squash">
-                `
+                `,
+        "description": `Do you want to find squash partners? Then join our community and play!`
       }
     },
     ru: {
       translation: {
-        "key": `<h1>Ищете партнера по<br>сквошу в Лиссабоне?</h1>
+        "content": `<h1>Ищете партнера по<br>сквошу в Лиссабоне?</h1>
                 <h2>Присоединяйтесь к нашей группе в Telegram</h2>
                 <a href="https://t.me/+BbHMaduO-aE1YmUy">Присоединяйся сейчас!</a>
                 <img src="assets/qr.png" alt="squash">
-                `
+                `,
+        "description": `Хотите найти партнеров по сквошу? Тогда присоединяйтесь к нашему сообществу и играйте!`
       }
     },
     pt: {
       translation: {
-        "key": `<h1>Procura um parceiro <br> de squash em Lisboa?</h1>
+        "content": `<h1>Procura um parceiro <br> de squash em Lisboa?</h1>
                 <h2>Participe do nosso grupo no Telegram</h2>
                 <a href="https://t.me/+BbHMaduO-aE1YmUy">Entrar!</a>
                 <img src="assets/qr.png" alt="squash">
-               `
+               `,
+        "description": `Você quer encontrar parceiros de squash? Então junte-se à nossa comunidade e jogue!`
       }
     },
     uk: {
       translation: {
-        "key": `<h1>Шукаєте партнера по<br>сквошу в Лісабоні?</h1>
+        "content": `<h1>Шукаєте партнера по<br>сквошу в Лісабоні?</h1>
                 <h2>Приєднуйтесь до нашої групи в Telegram</h2>
                 <a href="https://t.me/+BbHMaduO-aE1YmUy">Приєднуйся зараз!</a>
                 <img src="assets/qr.png" alt="squash">
-                `
+                `,
+        "description": `Хочете знайти партнерів зі сквошу? Тоді приєднуйтесь до нашої спільноти та грайте!`
       }
     }
   }
 });
 
+i18next.on('languageChanged', (lng) => {document.documentElement.setAttribute('lang', lng);})
+
 // Language switch buttons listeners
 
 document.getElementById('eng').addEventListener('click',()=> {
-  document.documentElement.lang = 'en';
   document.getElementById('container').innerHTML = i18next.changeLanguage('en')
   .then((t) => {
-    document.getElementById('container').innerHTML = t('key'); 
+    document.getElementById('container').innerHTML = t('content'); 
+    document.querySelector('meta[name="description"]').setAttribute("content", t('description'));
   });
 });
 
 document.getElementById('rus').addEventListener('click',()=> {
-  document.documentElement.lang = 'ru';
   i18next.changeLanguage('ru')
   .then((t) => {
-    document.getElementById('container').innerHTML = t('key'); 
+    document.getElementById('container').innerHTML = t('content'); 
+    document.querySelector('meta[name="description"]').setAttribute("content", t('description'));
   });
 });
 
 document.getElementById('por').addEventListener('click',()=> {
-  document.documentElement.lang = 'pt';
   i18next.changeLanguage('pt')
   .then((t) => {
-    document.getElementById('container').innerHTML = t('key'); 
+    document.getElementById('container').innerHTML = t('content'); 
+    document.querySelector('meta[name="description"]').setAttribute("content", t('description'));
   });
 });
 
 document.getElementById('ukr').addEventListener('click',()=> {
-  document.documentElement.lang = 'uk';
   i18next.changeLanguage('uk')
   .then((t) => {
-    document.getElementById('container').innerHTML = t('key'); 
+    document.getElementById('container').innerHTML = t('content'); 
+    document.querySelector('meta[name="description"]').setAttribute("content", t('description'));
   });
 });
 
