@@ -6,10 +6,17 @@
   <meta name="description" content="Do you want to find squash partners? Then join our community and play!"/>
   <meta name="keywords" content="squash, find, play, Lisbon, partners, players"/>
   <meta name="revised" content="Friday, October 7th, 2022, 1:15 pm" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="og:title" content="Squash partners Lisbon"/>
-  <meta name="og:image" content="assets/squashers.jpg"/>
-  <meta name="og:description" content="Do you want to find squash partners? Then join our community and play!"/>
+  <meta property="og:url" content="https://squash.partners/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Squash partners Lisbon">
+  <meta property="og:description" content="Do you want to find squash partners? Then join our community and play!">
+  <meta property="og:image" content="https://github.com/ZaharBozhok/squash.partners/blob/main/assets/squashers.jpg?raw=true">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="squash.partners">
+  <meta property="twitter:url" content="https://squash.partners/">
+  <meta name="twitter:title" content="Squash partners Lisbon">
+  <meta name="twitter:description" content="Do you want to find squash partners? Then join our community and play!">
+  <meta name="twitter:image" content="https://github.com/ZaharBozhok/squash.partners/blob/main/assets/squashers.jpg?raw=true">
   <link rel="stylesheet" href="./style.css">
   <title>Squash partners Lisbon</title>
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
@@ -21,7 +28,7 @@
   <h1>Looking for a squash<br>partner in Lisbon?</h1>
   <h2>Join our group in Telegram</h2>
   <a href="https://t.me/+BbHMaduO-aE1YmUy">Join now!</a>
-  <img src="assets/qr.webp" alt="QR-Code">
+  <img width="200px" height="200px" src="assets/qr.webp" alt="QR-Code">
 </main>
 
 <section class="lang-switcher-container">
@@ -56,7 +63,7 @@
         "content": `<h1>Looking for a squash<br>partner in Lisbon?</h1>
                 <h2>Join our group in Telegram</h2>
                 <a href="https://t.me/+BbHMaduO-aE1YmUy">Join now!</a>
-                <img src="assets/qr.webp" alt="squash">
+                <img width="200px" height="200px" src="assets/qr.webp" alt="squash">
                 `,
         "description": `Do you want to find squash partners? Then join our community and play!`
       }
@@ -66,7 +73,7 @@
         "content": `<h1>Ищете партнера по<br>сквошу в Лиссабоне?</h1>
                 <h2>Присоединяйтесь к нашей группе в Telegram</h2>
                 <a href="https://t.me/+BbHMaduO-aE1YmUy">Присоединяйся сейчас!</a>
-                <img src="assets/qr.webp" alt="squash">
+                <img width="200px" height="200px" src="assets/qr.webp" alt="squash">
                 `,
         "description": `Хотите найти партнеров по сквошу? Тогда присоединяйтесь к нашему сообществу и играйте!`
       }
@@ -76,7 +83,7 @@
         "content": `<h1>Procura um parceiro <br> de squash em Lisboa?</h1>
                 <h2>Participe do nosso grupo no Telegram</h2>
                 <a href="https://t.me/+BbHMaduO-aE1YmUy">Entrar!</a>
-                <img src="assets/qr.webp" alt="squash">
+                <img width="200px" height="200px" src="assets/qr.webp" alt="squash">
                `,
         "description": `Você quer encontrar parceiros de squash? Então junte-se à nossa comunidade e jogue!`
       }
@@ -86,7 +93,7 @@
         "content": `<h1>Шукаєте партнера по<br>сквошу в Лісабоні?</h1>
                 <h2>Приєднуйтесь до нашої групи в Telegram</h2>
                 <a href="https://t.me/+BbHMaduO-aE1YmUy">Приєднуйся зараз!</a>
-                <img src="assets/qr.webp" alt="squash">
+                <img width="200px" height="200px" src="assets/qr.webp" alt="squash">
                 `,
         "description": `Хочете знайти партнерів зі сквошу? Тоді приєднуйтесь до нашої спільноти та грайте!`
       }
@@ -102,6 +109,7 @@ function updatePageLanguage(t) {
   document.getElementById('container').innerHTML = t('content'); 
   document.querySelector('meta[name="description"]').setAttribute("content", t('description'));
   document.querySelector('meta[name="og:description"]').setAttribute("content", t('description'));
+  document.querySelector('meta[name="twitter:description"]').setAttribute("content", t('description'));
 }
 
 document.getElementById('eng').addEventListener('click',()=> {
