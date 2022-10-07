@@ -70,9 +70,10 @@ body {
 .lang-switcher-container {
     position: fixed;
     top: 15px;
-    left: 15px;
+    width: 100%;
     display: flex;
     gap: 2vh;
+    justify-content: center;
 }
 
 .lang-switcher-button {
@@ -161,7 +162,6 @@ body {
     .lang-switcher-container{
         left: 0;
         width: 100%;
-        justify-content: center;
     }
 }
 
