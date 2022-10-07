@@ -6,6 +6,7 @@
   <meta name="description" content="Do you want to find squash partners? Then join our community and play!"/>
   <meta name="keywords" content="squash, find, play, Lisbon, partners, players"/>
   <meta name="revised" content="Friday, October 7th, 2022, 1:15 pm" />
+  <meta name="google" content="notranslate" />
   <meta property="og:url" content="https://squash.partners/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Squash partners Lisbon">
@@ -108,7 +109,7 @@ i18next.on('languageChanged', (lng) => {document.documentElement.setAttribute('l
 function updatePageLanguage(t) {
   document.getElementById('container').innerHTML = t('content'); 
   document.querySelector('meta[name="description"]').setAttribute("content", t('description'));
-  document.querySelector('meta[name="og:description"]').setAttribute("content", t('description'));
+  document.querySelector('meta[property="og:description"]').setAttribute("content", t('description'));
   document.querySelector('meta[name="twitter:description"]').setAttribute("content", t('description'));
 }
 
